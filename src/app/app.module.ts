@@ -11,6 +11,7 @@ import {MyserviceService} from "./service/myservice.service";
 import {MyPipePipe} from './core/pipe/my-pipe.pipe';
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {MyInterceptorInterceptor} from "./core/interceptor/my-interceptor.interceptor";
+import { DashboardComponent } from './component/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {MyInterceptorInterceptor} from "./core/interceptor/my-interceptor.interc
     ChildComponent,
     NumberValidatorDirective,
     MyPipePipe,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

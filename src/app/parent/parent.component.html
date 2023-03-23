@@ -1,0 +1,40 @@
+<!-- [item] Property data binding -->
+<!--<app-child [item]="currentItem"></app-child>-->
+
+<div class="container">
+
+  <div>
+
+  </div>
+  <!-- String Interpolation using Pipe-->
+  <p>{{currentItem | uppercase}}</p>
+
+  <!-- Parameterizing Pipe -->
+  <p>{{date | date : 'fullDate'}}</p>
+
+  <!-- Chaining Multiple Pipe -->
+  <p>{{date | date : 'fullDate' | uppercase}}</p>
+
+  <!-- Two way data binding -->
+  <input type="text" [(ngModel)]="currentItem">
+  <br><br>
+
+  <app-child [item]="currentItem" (newItemEvent)="addItem($event)"></app-child>
+
+<!--  <router-outlet></router-outlet>-->
+
+  <br><br>
+  <a routerLink="child">Go to Child</a>
+
+  <div>
+    <ul>
+      <li *ngFor="let item of items">{{item}}</li>
+    </ul>
+  </div>
+</div>
+
+
+<!--<ng-content>-->
+<!--</ng-content>-->
+
+

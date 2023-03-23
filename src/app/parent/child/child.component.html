@@ -1,0 +1,12 @@
+
+<div class="modal-body border-3">
+  <label for="item-input">Add an item:</label>
+
+  <!-- Local reference #newItemw -->
+  <input type="text" id="item-input" #newItem>
+
+  <!-- (click) event binding -->
+  <button class="btn-danger" type="button" (click)="addNewItem(newItem.value)">Add to parent's list</button>
+<!--<br><br>-->
+<!--  <a routerLink="parent">Go to Parent</a>-->
+</div>

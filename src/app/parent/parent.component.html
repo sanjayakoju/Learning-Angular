@@ -21,10 +21,17 @@
 
   <app-child [item]="currentItem" (newItemEvent)="addItem($event)"></app-child>
 
-<!--  <router-outlet></router-outlet>-->
+  <!--  <router-outlet></router-outlet>-->
 
   <br><br>
+  <!--  relative paths are useful when you want to navigate to a route that is relative to the current route.-->
+  <!--  eg: currently in parent path /parent and navigate to /parent/child-->
   <a routerLink="child">Go to Child</a>
+
+  <br><br>
+  <!--  Absolute paths are useful when you want to navigate to a specific route regardless of the current route-->
+  <!--  eg: currently in parent path /parent and navigate to /dashboard-->
+  <a routerLink="/dashboard">Go to Dashboard</a>
 
   <div>
     <ul>

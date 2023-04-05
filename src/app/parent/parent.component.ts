@@ -20,13 +20,11 @@ export class ParentComponent implements OnInit {
   items = ['item1', 'item2', 'item3', 'item4'];
 
   addItem(newItem: string) {
-    debugger
     this.items.push(newItem);
   }
 
   welcomePromise = new Promise(resolve => {
     console.log("In Promise executor fn");
-
     resolve("Welcome!");
   });
 
@@ -45,7 +43,6 @@ export class ParentComponent implements OnInit {
 
     this.welcomePromise.then(console.log);
 
-    debugger
     console.log("Before calling the subscribe method");
 
     this.welcomeObservable$.subscribe(console.log);

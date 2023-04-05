@@ -30,7 +30,6 @@ export class ChildComponent implements OnInit {
   student: any = {};
 
   addNewItem(value: string) {
-    debugger
     this.newItemEvent.emit(value);
   }
 
